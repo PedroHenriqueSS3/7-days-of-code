@@ -1,0 +1,15 @@
+//Desafio #2
+
+// Pergunta 1
+const nome = prompt("Qual o seu nome?");
+
+// Pergunta 2
+const idade = prompt("Quantos anos você tem?");
+
+// Pergunta 3
+const linguagem = prompt("Qual linguagem de programação você está estudando?");
+
+// Exibindo as respostas
+const msg = `"Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem}!"!`;
+
+alert(msg);
