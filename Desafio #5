@@ -1,0 +1,36 @@
+//Desafio #5
+
+let frutas = [];
+let laticinios = [];
+let doces = [];
+let congelados = [];
+let comida = "";
+let categoria = "";
+
+let adicionarMais = "sim";  
+while(adicionarMais != "não"){
+    adicionarMais = prompt("Você quer adicionar uma comida na lista de compras? 'sim' ou 'não'.");
+    while (adicionarMais != "sim" && adicionarMais != "não") {
+	alert(`Responda 'sim' ou 'não'`);
+        adicionarMais = prompt("Você quer adicionar uma comida na lista de compras? 'sim' ou 'não'.");
+    }
+	
+    if (adicionarMais === "não"){  
+        break;
+    }
+	
+    comida = prompt("Qual comida você quer adicionar?");
+    categoria = prompt("Qual categoria essa comida se encaixa: 'frutas', 'laticínios', 'doces' ou 'congelados'?");
+    if(categoria === 'frutas'){
+        frutas.push(comida);
+    } else if (categoria === 'laticínios'){
+        laticinios.push(comida);
+    } else if (categoria === 'doces'){
+        doces.push(comida);
+    } else if (categoria === 'congelados'){
+        congelados.push(comida);
+    } else {
+        alert("Cartegoria não adicionada.")
+    }
+}
+alert(`Lista de compras:\n  Frutas: ${frutas}\n  Laticínios: ${laticinios}\n  Doces: ${doces}\n  Congelados: ${congelados}`);
